@@ -1,18 +1,16 @@
 # AI-Agents-Based-Project-Management
 This project is basically the automation of our company Asana platform through Access token and Developer API's
 
-# Project Title
+# LLM Based AI Agents
 
-Objective is to create a simple Q/A bot by using RAG technique in an LLM like OpenAI Llama or Mistral. Create a simple Q/A bot that will answer user's
-questions from a given knowledge. To store the knowledge use Vector Database and embeddings. Use LLM to answer user questions in natural language.
+LLM agents are advanced AI systems designed for creating complex text that needs sequential reasoning. They can think ahead, remember past conversations, and use different tools to adjust their responses based on the situation and style needed.
 
-
-## Getting Started
-Developers have divided the Tasks into three main Sections 
+## Introduction
+AI agents are autonomous intelligent systems performing specific tasks without human intervention. Organizations use AI agents to achieve specific goals. 
 
 ### Prerequisites
 
-You need to have an OpenAI key for the purpose of generating embeddings. While running the code, in order to save the Key for Public Disposal. First Create the Environment. Then Save the Key There.
+You need to have an OpenAI key for the purpose of using LLMs. Install the requirements.txt file first and setup the environment file. Add ASANA access token and OpenAI_API_KEY and project/workspace ID. I have provided sample files of environment.
 
 ```
 nano .env
@@ -23,68 +21,11 @@ OPEN_AI_KEY = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 A step by step series of examples that tell you how to get a development-env running
 
-Make the Virtual Environment with Version of Python=3.9. Run the "requirements.txt" file in the Virtual Environment
+Make the Virtual Environment with Version of Python=3.11. Run the "requirements.txt" file in the Virtual Environment
 
 ```
 pip install -r requirements.txt
 ```
-
-
-
-## Running the tests 
-1. LLAMA with RAG: We've used local database and LLAMA for querying the Response :point_left:
-2. Chroma DB with OpenAI Models: We've used Chroma database and LLM for querying the Response :point_left:
-
-
-
-### Prompting/Coding style For the Exact Similar Output in Trial Examination Questionarre
-
-From llama_index.core we have used the Prompt Library in order to design the Prompt in the Desired Format.
-The "qa_template" used is producing the outputs in the required format as requested in the paper sample.
-
-
-```
-    template = (
-        "We have provided context information below. \n"
-        "---------------------\n"
-        "{context_str}"
-        "\n---------------------\n"
-        "Given this information, please answer the question and each question should start with the word User: and each answer should start with code word Bot: {query_str}\n"
-    )
-
-```
-
-## Data Ingestion of Content
-
-The two PDF's are used for guiding the developed Chatbot. The PDF's are available in the "data" folder
-
-
-### The Outputs generated can be visualized in the Provided Screenshot 
-
-We have provided the :arrow_right: Jupyter Notebook & Also the :arrow_right: python_script for smooth testing of the designed project
-:white_check_mark: First Activate the Environment named as "market" and then Run the code
-
-
-```
-python simple_code_structure.py
-```
-
-### The Outputs generated can be visualized in the Provided Screenshot 
-:heavy_check_mark:
-![Llama](output_results/llamarag.png)
-
-
-
-:heavy_check_mark:
-![Chroma](output_results/chroma_openai.png)
-
-
-:heavy_check_mark:
-![Llama](output_results/llamarag_2.png)
-
-:heavy_check_mark:
-![Chroma](output_results/chroma_openai2.png)
-
 
 
 
